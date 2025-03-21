@@ -9,7 +9,7 @@ This project uses PyQt6, make sure to install via pip if you plan to modify.
 
 You can build your own lessons and then build a executable via pyinstaller, just make sure to attach the json.
 
-`pyinstaller --onefile --noconsole --add-data "lessons.json:." your_script.py`
+`pyinstaller --onefile --noconsole --add-data "lessons.json:." quiz.py`
 
 ## Building Lessons
 
