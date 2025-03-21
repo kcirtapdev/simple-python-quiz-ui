@@ -341,7 +341,7 @@ class LessonManager(QWidget):
         self.setWindowTitle("Amazing code")
         
         self.setWindowFlags(self.windowFlags() & ~Qt.WindowType.WindowMaximizeButtonHint)
-        self.setFixedSize(self.sizeHint())  # Prevent resizing
+        self.setFixedSize(self.sizeHint())
     
         self.main_layout = QVBoxLayout()
         self.setLayout(self.main_layout)
@@ -369,7 +369,6 @@ class LessonManager(QWidget):
         self.adjustSize()
 
     def load_current_lesson(self):
-        # Always hide the Next Lesson button on loading a new lesson.
         self.next_button.setVisible(False)
         while self.lesson_container.count():
             item = self.lesson_container.takeAt(0)
@@ -384,7 +383,7 @@ class LessonManager(QWidget):
                 lesson_config["correct_answers"],
                 lesson_config["bank_items"],
                 lesson_config["desired_result"],
-                manager=self  # Pass the manager reference
+                manager=self
             )
             self.lesson_widget.lessonCompleted.connect(self.on_lesson_completed)
             self.lesson_container.addWidget(self.lesson_widget)
@@ -412,7 +411,6 @@ class LessonManager(QWidget):
         if ok and item:
             selected_index = int(item.split()[1][:-1]) - 1
             self.current_index = selected_index
-            # Hide Next Lesson button when selecting a lesson.
             self.next_button.setVisible(False)
             self.load_current_lesson()
 
