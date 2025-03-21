@@ -2,6 +2,7 @@ import json
 import sys
 import io
 import re
+import os
 from PyQt6.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
                              QFrame, QMessageBox, QSizePolicy, QGridLayout, QInputDialog, QDialog, QTextEdit)
 from PyQt6.QtCore import Qt, QTimer, pyqtSignal, QMimeData
@@ -417,8 +418,13 @@ class LessonManager(QWidget):
     def show_answers(self):
         self.lesson_widget.show_answers()
 
+def resource_path(relative_path):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
 
 def load_lessons_from_json(file_path="lessons.json"):
+    file_path = resource_path(file_path)
     try:
         with open(file_path, "r") as f:
             lessons = json.load(f)
@@ -528,7 +534,7 @@ lesson3 = {
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    lessons = load_lessons_from_json("lessons.json")
+    lessons = load_lessons_from_json()
     if not lessons:
         lessons = [lesson1, lesson2]
     manager = LessonManager(lessons)
