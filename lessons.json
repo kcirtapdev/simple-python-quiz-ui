@@ -1,0 +1,300 @@
+[
+    {
+      "lesson_name": "Automated Cooking Timer",
+      "code_lines": [
+        ["# Automated Cooking Timer"],
+        ["# When cooking, we often need to set a timer and wait"],
+        ["# until the timer reaches zero before taking the food out."],
+        ["def start_timer(", "parameter", "):"],
+        ["    while ", "condition", ":"],
+        ["        print('Time remaining:', ", "output", ")"],
+        ["        ", "decrement"],
+        ["    print('Time is up! Remove the food.')"],
+        ["# Example usage"],
+        ["start_timer(", "input_value", ")"]
+      ],
+      "drop_area_keys": ["parameter", "condition", "output", "decrement", "input_value"],
+      "correct_answers": {
+        "parameter": "seconds",
+        "condition": "seconds > 0",
+        "output": "seconds",
+        "decrement": "seconds -= 1",
+        "input_value": "10"
+      },
+      "bank_items": [
+        "seconds",
+        "seconds > 0",
+        "seconds",
+        "seconds -= 1",
+        "10",
+        "seconds >= 0",
+        "None",
+        "while True",
+        "stop()",
+        "exit"
+      ],
+      "desired_result": "Time remaining: 10\nTime remaining: 9\nTime remaining: 8\nTime remaining: 7\nTime remaining: 6\nTime remaining: 5\nTime remaining: 4\nTime remaining: 3\nTime remaining: 2\nTime remaining: 1\nTime is up! Remove the food."
+    },
+    {
+      "lesson_name": "Customer Support Ticket System",
+      "code_lines": [
+        ["# Customer Support Ticket System"],
+        ["# Companies process multiple support tickets every day."],
+        ["# This function processes a list of customer tickets in order."],
+        ["def process_tickets(", "parameter", "):"],
+        ["    for ticket in ", "loop_variable", ":"],
+        ["        print('Processing ticket:', ", "output", ")"],
+        ["    print('All tickets have been processed.')"],
+        ["# Example usage"],
+        ["support_tickets = ['Refund Request', 'Technical Issue', 'Account Login Help']"],
+        ["process_tickets(", "input_value", ")"]
+      ],
+      "drop_area_keys": ["parameter", "loop_variable", "output", "input_value"],
+      "correct_answers": {
+        "parameter": "tickets",
+        "loop_variable": "tickets",
+        "output": "ticket",
+        "input_value": "support_tickets"
+      },
+      "bank_items": [
+        "tickets",
+        "tickets",
+        "ticket",
+        "support_tickets",
+        "None",
+        "while True",
+        "stop()",
+        "ticket_list",
+        "customer_tickets"
+      ],
+      "desired_result": "Processing ticket: Refund Request\nProcessing ticket: Technical Issue\nProcessing ticket: Account Login Help\nAll tickets have been processed."
+    },
+    {
+      "lesson_name": "Water Level Control Code",
+      "code_lines": [
+        ["# Water Level Control Code"],
+        ["# This code controls the water level in a tank"],
+        ["# and lowers it based on the amount specified."],
+        ["# The water level is decreased in a loop until it reaches the threshold."],
+        ["# Complete the code by dragging the correct items into the drop areas."],
+        ["threshold = 500"],
+        ["water_level = 1000"],
+        [""],
+        ["def lower_water_level(", "param", "):"],
+        ["    global water_level"],
+        ["    for i in range(0, amount):"],
+        ["        ", "loop_condition"],
+        [""],
+        ["lower_water_level(", "input_value", ")"],
+        [""],
+        ["check(water_level ", "comparison", " threshold)"]
+      ],
+      "drop_area_keys": ["param", "loop_condition", "input_value", "comparison"],
+      "correct_answers": {
+        "param": "amount",
+        "loop_condition": "water_level -= 1",
+        "input_value": "501",
+        "comparison": "<="
+      },
+      "bank_items": [
+        "amount",
+        "water_level -= 1",
+        "501",
+        "<=",
+        "==",
+        ">",
+        "++",
+        "null",
+        "if",
+        "for"
+      ],
+      "desired_result": "True"
+    },
+    {
+      "lesson_name": "Quest Tracker System",
+      "code_lines": [
+        ["# Quest Tracker System"],
+        ["# In many role-playing games (RPGs), quests have multiple steps."],
+        ["# Players must complete each step in order to finish the quest."],
+        ["# This function keeps track of a player's progress in a quest."],
+        ["def complete_quest(", "parameter", "):"],
+        ["    # Check if all steps are completed"],
+        ["    if ", "base_case", ":"],
+        ["        return 'Quest Completed!'"],
+        ["    # Display current step"],
+        ["    print('Step:', quest_steps[", "current_step", "])"],
+        ["    # Mark this step as done and move to the next one"],
+        ["    return complete_quest(", "recursive_call", ")"],
+        ["# Example usage"],
+        ["quest_steps = ['Talk to the village elder', 'Find the lost sword', 'Defeat the bandit leader']"],
+        ["print(complete_quest(", "input_value", "))"]
+      ],
+      "drop_area_keys": ["parameter", "base_case", "current_step", "recursive_call", "input_value"],
+      "correct_answers": {
+        "parameter": "step",
+        "base_case": "step >= len(quest_steps)",
+        "current_step": "step",
+        "recursive_call": "step + 1",
+        "input_value": "0"
+      },
+      "bank_items": [
+        "step",
+        "step >= len(quest_steps)",
+        "step",
+        "step + 1",
+        "0",
+        "step <= 0",
+        "quest_steps + step",
+        "None",
+        "return quest_steps"
+      ],
+      "desired_result": "Step: Talk to the village elder\nStep: Find the lost sword\nStep: Defeat the bandit leader\nQuest Completed!"
+    },
+    {
+      "lesson_name": "Countdown Timer using While Loop",
+      "code_lines": [
+        ["# Countdown Timer using While Loop"],
+        ["# This code starts a countdown from a given number"],
+        ["# and continues until it reaches zero."],
+        ["def countdown(", "parameter", "):"],
+        ["    while ", "condition", ":"],
+        ["        print(", "output", ")"],
+        ["        ", "decrement"],
+        ["countdown(", "input_value", ")"]
+      ],
+      "drop_area_keys": ["parameter", "condition", "output", "decrement", "input_value"],
+      "correct_answers": {
+        "parameter": "n",
+        "condition": "n > 0",
+        "output": "n",
+        "decrement": "n -= 1",
+        "input_value": "10"
+      },
+      "bank_items": [
+        "n",
+        "n > 0",
+        "n",
+        "n -= 1",
+        "10",
+        "n >= 0",
+        "while True",
+        "None",
+        "stop()",
+        "exit"
+      ],
+      "desired_result": "10\n9\n8\n7\n6\n5\n4\n3\n2\n1"
+    },
+    {
+      "lesson_name": "Fibonacci Sequence Generator",
+      "code_lines": [
+        ["# Fibonacci Sequence Generator"],
+        ["# The Fibonacci sequence is a series of numbers where"],
+        ["# each number is the sum of the two preceding ones."],
+        ["# It starts with 0 and 1, and follows this pattern: 0, 1, 1, 2, 3, 5, 8, ..."],
+        ["# This function returns the nth Fibonacci number using recursion."],
+        ["def fibonacci(", "parameter", "):"],
+        ["    # The base case: The first two numbers in the sequence are themselves"],
+        ["    if ", "base_case", ":"],
+        ["        return ", "return_value"],
+        ["    # Recursively sum the two previous Fibonacci numbers"],
+        ["    return fibonacci(", "recursive_call_1", ") + fibonacci(", "recursive_call_2", ")"],
+        ["# Example usage"],
+        ["print(fibonacci(", "input_value", "))"]
+      ],
+      "drop_area_keys": ["parameter", "base_case", "return_value", "recursive_call_1", "recursive_call_2", "input_value"],
+      "correct_answers": {
+        "parameter": "n",
+        "base_case": "n <= 1",
+        "return_value": "n",
+        "recursive_call_1": ["n - 1", "n - 2"],
+        "recursive_call_2": ["n - 2", "n - 1"],
+        "input_value": "5"
+      },
+      "bank_items": [
+        "n",
+        "n <= 1",
+        "n",
+        "n - 1",
+        "n - 2",
+        "5",
+        "n >= 1",
+        "n + 1",
+        "fibonacci(n + 2)",
+        "None"
+      ],
+      "desired_result": "5"
+    },
+    {
+      "lesson_name": "Find Maximum Value in a List",
+      "code_lines": [
+        ["# Find Maximum Value in a List"],
+        ["# This function returns the maximum value from a given list."],
+        ["def find_max(", "parameter", "):"],
+        ["    max_val = ", "initial_value"],
+        ["    for num in ", "loop_variable", ":"],
+        ["        if ", "condition", ":"],
+        ["            max_val = num"],
+        ["    return max_val"],
+        ["# Example usage"],
+        ["print(find_max(", "input_value", "))"]
+      ],
+      "drop_area_keys": ["parameter", "initial_value", "loop_variable", "condition", "input_value"],
+      "correct_answers": {
+        "parameter": "numbers",
+        "initial_value": "numbers[0]",
+        "loop_variable": "numbers",
+        "condition": "num > max_val",
+        "input_value": "[3, 8, 1, 6]"
+      },
+      "bank_items": [
+        "numbers",
+        "numbers[0]",
+        "numbers",
+        "num > max_val",
+        "[3, 8, 1, 6]",
+        "max(numbers)",
+        "None",
+        "n < max_val",
+        "for x in range(10)",
+        "input('Enter list: ')"
+      ],
+      "desired_result": "8"
+    },
+    {
+      "lesson_name": "Palindrome Checker",
+      "code_lines": [
+        ["# Check if a string is a palindrome"],
+        ["# A palindrome is a word, phrase, or sequence that reads"],
+        ["# the same backward as forward. Examples include:"],
+        ["# 'racecar', 'madam', 'level', 'radar', and 'noon'."],
+        ["# This function checks if the given string is a palindrome."],
+        ["def is_palindrome(", "parameter", "):"],
+        ["    # Reverse the string using slicing"],
+        ["    reversed_string = ", "reversal"],
+        ["    # Compare the original and reversed string"],
+        ["    return ", "comparison"],
+        ["# Example usage"],
+        ["print(is_palindrome(", "input_value", "))"]
+      ],
+      "drop_area_keys": ["parameter", "reversal", "comparison", "input_value"],
+      "correct_answers": {
+        "parameter": "s",
+        "reversal": "s[::-1]",
+        "comparison": "s == reversed_string",
+        "input_value": "'racecar'"
+      },
+      "bank_items": [
+        "s",
+        "s[::-1]",
+        "s == reversed_string",
+        "'racecar'",
+        "len(s)",
+        "s.upper()",
+        "None",
+        "reverse(s)",
+        "sorted(s)",
+        "print(s)"
+      ],
+      "desired_result": "True"
+    }
+  ]
